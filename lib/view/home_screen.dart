@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/instance_manager.dart';
 import 'package:magic_ball/controller/ball_controller.dart';
+import 'package:magic_ball/view/widgets/magic_8_ball.dart';
 
 class HomeScreen extends GetView<BallController> {
   const HomeScreen({super.key});
@@ -17,13 +18,11 @@ class HomeScreen extends GetView<BallController> {
         ),
       ),
       body: const SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-              child: Text('Sample'),
-            ),
-          ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Magic8Ball()],
+          ),
         ),
       ),
     );
